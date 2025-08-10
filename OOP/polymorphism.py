@@ -1,38 +1,33 @@
 
 
 class Vehicle:
-    def __init__(self, vehicleType):
+    def __init__(self, vehicleType, model, mode):
         self.vehicleType = vehicleType
-        print(f"Vehicle Type: {self.vehicleType}")
-        
-    def move(self, mode):
+        self.model = model
         self.mode = mode
-        print(f"Mode: {self.mode}")
+        print(f"Vehicle Type {self.vehicleType}")
+        print(f"Mode: {self.mode} ")
+
+    def move(self):
+        print(f"The {self.vehicleType} is moving using the {self.mode} mode. ")
     
 #how to optimize the below code
 class Car(Vehicle):
     def __init__(self,model):
-        super().__init__(vehicleType="Car")
-        self.model = model
-        super().move("drive")
-
+        super().__init__(vehicleType="Car", mode = "drive", model = model)
         
 class Rickshaw(Vehicle):
     def __init__(self,model):
-        super().__init__(vehicleType="Rickshaw")        
-        self.model = model
-        super().move("paddle")
+        super().__init__(vehicleType="Rickshaw", mode = "paddle", model = model)
+        
 
 class Air(Vehicle):
     def __init__(self,model):
-        super().__init__(vehicleType="Air")
-        self.model = model
-        super().move("fly")       
-
-
+        super().__init__(vehicleType="Air", mode = "fly", model = model)
+         
 car1 = Car("c1")
 rick = Rickshaw("r1")
 air = Air("a1")
 
-# for x in(car1,rick,air):
-#     x.move()
+for x in(car1,rick,air):
+    x.move()
