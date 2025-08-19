@@ -10,7 +10,7 @@ class CentralDB:
         self.service = service
         
     def serverLocation(self):
-        return f"Connecting to {self.server_address} at port: {self.port_address} \n"
+        print(f"Connecting to {self.server_address} at port: {self.port_address} \n")
 
     def connectingDB(self):
         print(f"Connecting to {self.service} database... ")
@@ -45,14 +45,16 @@ class DifferentModules():
     def __init__(self):
         pass
 
-# cDB = CentralDB()
+cDB = CentralDB()
 
 pgsq = PostgreSQL()
 rds = Redis()
 es = ElasticSearch()
 
-pgsq1 = PostgreSQL().serverLocation()
+pgsq1 = PostgreSQL()
 # dm = DifferentModules()
+pgsq1.serverLocation()
+
 
 # print(f"Server Address: {CentralDB().server_address}")
 # print(f"Port Number: {CentralDB().server_address}")
