@@ -19,15 +19,17 @@ class Car(Vehicle):
 class Rickshaw(Vehicle):
     def __init__(self,model):
         super().__init__(vehicleType="Rickshaw", mode = "paddle", model = model)
-        
 
 class Air(Vehicle):
     def __init__(self,model):
         super().__init__(vehicleType="Air", mode = "fly", model = model)
-         
+
 car1 = Car("c1")
 rick = Rickshaw("r1")
 air = Air("a1")
 
-for x in(car1,rick,air):
-    x.move()
+for i in(car1,rick,air):
+    i.move()
+    
+    
+# v = Vehicle(vehicleType="Rickshaw", mode= "paddle", model= "r1")
