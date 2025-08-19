@@ -48,5 +48,5 @@ es = ElasticSearch()
 # print(f"Port Number: {CentralDB().server_address}")
 
 
-for x in(pgs, rds, es):
-    x.connectingDB()
+for service in(pgs, rds, es):
+    service.connectingDB()
