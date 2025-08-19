@@ -40,8 +40,6 @@ class ElasticSearch(CentralDB):
 
 pgs = PostgreSQL()
 pgs.serverLocation()
-
-pgsql = PostgreSQL()
 rds = Redis()
 es = ElasticSearch()
 
@@ -50,5 +48,5 @@ es = ElasticSearch()
 # print(f"Port Number: {CentralDB().server_address}")
 
 
-for x in(pgsql, rds, es):
+for x in(pgs, rds, es):
     x.connectingDB()
